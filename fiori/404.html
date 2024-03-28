@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="burgher" class="burgher">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="menu" class="menu_tendina">
+        <a href="index.html"><h2>HOME</h2></a>
+        <p>Easter egg</br>Spereo di esermi fatto perdonare. Adesso sai cosa vuoldire 404. :-P </p>
+    </div>
+
+    <div class="qoq">
+        <h1 class="big_text">404</h1>
+        <h3>L'errore 404, o Not Found, è un codice di stato standard del protocollo HTTP. Con esso viene indicato che il client è in grado di comunicare con il server, ma che quest'ultimo non ha trovato ciò che è stato richiesto oppure è stato configurato in modo tale da non poter completare la richiesta.</h3>
+    </div>
+
+    <div class="present">
+        <img id="regalo" src="present_clous.png" alt="Ooops! immagnia persa :" ondblclick="cambiaImmagine()">
+    </div>
+
+    <script>
+        function cambiaImmagine() {
+            var immagine = document.getElementById('regalo');
+            if (immagine.src.match("present_clous.png")) {
+                immagine.src = "present_open.png"; // Cambia l'immagine
+            } else {
+                immagine.src = "present_clous.png"; // Torna all'immagine originale se è stata cambiata
+            }
+        }
+
+        
+        var mioDiv = document.getElementById("burgher");
+        var menu = document.getElementById('menu')
+        // Variabile di stato per tenere traccia dello stato corrente del div
+        var divSpostato = false;
+
+        // Aggiungi un gestore di eventi per l'evento di clic
+        mioDiv.addEventListener("click", function() {
+            // Controlla lo stato corrente del div
+            if (divSpostato) {
+            // Ripristina la posizione originale se il div è già stato spostato
+            menu.style.left = ""; // Ripristina la proprietà left
+            divSpostato = false; // Imposta il flag a false
+            } else {
+            // Sposta il div a una nuova posizione se il div non è ancora stato spostato
+            menu.style.left = "0px"; // Sposta il div a destra di 200px
+            
+            divSpostato = true; // Imposta il flag a true
+            }
+  });
+
+    </script>
+</body>
+
+</html>

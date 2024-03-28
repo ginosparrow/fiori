@@ -1,0 +1,234 @@
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(0,0,0,0);
+    backdrop-filter: blur(60px);
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+}
+header img{
+    width: 40px;
+}
+nav{
+    width: 30%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav li{
+    padding: 2px;
+    list-style: none;
+    font-weight: 900;
+}
+nav li:hover{
+    border-bottom: 2px  solid white;
+}
+
+.surce{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px ;
+    overflow: hidden;
+    transition: all  500ms ;
+}
+.surce input{
+    border: solid 1px rgb(255, 255, 255);
+    padding: 5px;
+    width: 1px;
+    transition: all  500ms ;
+}
+
+.surce img{
+    padding: 2px;
+    transition: all  500ms ;
+    height: 30px;
+    width: 30px;
+}
+.surce:hover{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 2px;
+    border-radius: 20px ;
+    width: auto;
+}
+.surce:hover input{
+    width: 200px;
+}
+.surce:hover img{
+    transform: rotate(360deg);
+}
+
+.copertina{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(fiori.png)no-repeat;
+    background-size: cover;
+}
+
+.contenuto_copertina{
+    padding-left: 30% ;
+    color: aliceblue;
+    text-shadow: 0px 0px 10px aqua;
+}
+
+.contenuto_copertina h1{
+    font-size: 90px;
+}
+.contenuto_copertina h3{
+    font-size: 40px;
+}
+.contenuto_copertina button{
+    background-color: rgba(6, 173, 229, 0);
+    color: rgb(166, 222, 250);
+    text-shadow: 0px 0px 10px rgb(2, 169, 252);
+    font-weight: 800;
+    font-size: 25px;
+    height: 55px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px ;
+    box-shadow: 0px 0px 10px rgb(2, 169, 252) ;
+    backdrop-filter: blur(10px);
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contenuto_copertina button:hover{
+    background-color: rgb(2, 169, 252);
+    color: aliceblue;
+    transform: scale(1.1, 1.1);
+}
+
+.articolo{
+    display: flex;
+    height: 100vh;
+}
+
+.img_articolo{
+    background: url(fiori.png) no-repeat center;
+    overflow: hidden;
+    width: 60%;
+    height: 100%;
+    background-size:1300px;
+    transition: all 200ms ;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+}
+.img_articolo p{
+    width: 30%;
+    padding: 10px;
+    color: aliceblue;
+    background-color: rgba(240, 248, 255, 0);
+    backdrop-filter: blur(25px);
+    color: rgb(217, 233, 248);
+    text-shadow: 0px 0px 10px rgb(166, 222, 250);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.img_articolo:hover {
+    background-size:1500px;
+}
+
+
+.text_articolo{
+    width: 40%;
+    padding: 40px;
+    padding-top: 70px;
+    font-weight: 500;
+}
+
+.text_articolo h1{
+    font-size: 60px;
+    color: rgb(2, 169, 252);
+}
+.text_articolo h3{
+    margin-top: -40px;
+    font-size: 20px;
+    color: rgb(166, 222, 250);
+    padding-left: 10px;
+}
+.text_articolo p{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.img_p{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(2, 169, 252);
+    padding: 3px;
+    border-radius: 50px;
+}
+
+.cards{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    justify-items: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    background-color: rgb(2, 169, 252);
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 15px rgb(2, 169, 252);
+    
+}
+.cards h1{
+    font-size: 60px;
+    color: rgb(2, 169, 252);
+}
+.card img{
+    width: 100px;
+    height: 100px;
+}
+.card p{
+    width: 0px;
+    overflow: hidden;
+    height: 0px;
+    transition: all 500ms;
+    
+}
+.card:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover p{
+    width: 300px;
+    height: 150px;
+}
+
+footer{
+    height: 200px;
+    color: aliceblue;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: space-around;
+    padding: 20pxa;
+}

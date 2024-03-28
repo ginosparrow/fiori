@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio automatico di immagine</title>
+<style>
+  /* Stile per centrare l'immagine */
+  #contenitore {
+    text-align: center;
+  }
+  #immagine {
+    width: 200px; /* Imposta la larghezza dell'immagine */
+    height: auto; /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+    transition: transform 0.5s ease; /* Aggiungi una transizione per un effetto di smoothness */
+  }
+  #immagine:hover {
+    transform: scale(1.1); /* Effetto di ingrandimento al passaggio del mouse */
+  }
+</style>
+</head>
+<body>
+
+<div id="contenitore">
+  <!-- Immagine da visualizzare -->
+  <img id="immagine" src="ricambio.jpg" alt="Immagine">
+</div>
+
+<script>
+    // Array di immagini
+    var immagini = ["ricambio.jpg", "18.png", "ociali.png"]; // Aggiungi più immagini secondo necessità
+  
+    // Variabile per tener traccia dell'indice corrente
+    var indiceCorrente = 0;
+  
+    // Funzione per cambiare l'immagine automaticamente una volta sola
+    function cambiaImmagineAutomaticamente() {
+      var immagine = document.getElementById('immagine');
+      immagine.src = immagini[indiceCorrente]; // Cambia l'immagine al prossimo indice nell'array
+  
+      // Incrementa l'indice corrente
+      indiceCorrente++;
+  
+      // Interrompi il cambio automatico di immagine se abbiamo mostrato tutte le immagini
+      if (indiceCorrente === immagini.length) {
+        clearInterval(intervallo);
+      }
+    }
+  
+    // Avvia il cambio automatico di immagine ogni 200ms
+    var intervallo = setInterval(cambiaImmagineAutomaticamente, 500);
+  </script>
+
+</body>
+</html>

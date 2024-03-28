@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambia immagine al click</title>
+<style>
+  /* Stile per centrare l'immagine */
+  #contenitore {
+    text-align: center;
+  }
+  #immagine {
+    width: 200px; /* Imposta la larghezza dell'immagine */
+    height: auto; /* Imposta l'altezza in modo che l'immagine mantenga le proporzioni originali */
+    transition: transform 0.5s ease; /* Aggiungi una transizione per un effetto di smoothness */
+  }
+  #immagine:hover {
+    transform: scale(1.1); /* Effetto di ingrandimento al passaggio del mouse */
+  }
+</style>
+</head>
+<body>
+
+<div id="contenitore">
+  <!-- Immagine da visualizzare -->
+  <img id="immagine" src="ricambio.jpg" alt="Immagine" onclick="cambiaImmagine()">
+</div>
+
+<script>
+  // Funzione per cambiare l'immagine al click
+  function cambiaImmagine() {
+    var immagine = document.getElementById('immagine');
+    if (immagine.src.match("ricambio.jpg")) {
+      immagine.src = "18.png"; // Cambia l'immagine
+    } else {
+      immagine.src = "ricambio.jpg"; // Torna all'immagine originale se è stata cambiata
+    }
+  }
+</script>
+
+</body>
+</html>

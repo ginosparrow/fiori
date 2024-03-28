@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animazione del cambio di posizione di un div al clic con possibilità di reset</title>
+<style>
+  #mioDiv {
+    position: absolute; /* Imposta la posizione assoluta */
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: left 0.5s, top 0.5s; /* Aggiungi transizioni per un effetto di animazione */
+  }
+</style>
+</head>
+<body>
+
+<div id="mioDiv">Questo è il mio div</div>
+
+<script>
+  // Seleziona l'elemento div
+  var mioDiv = document.getElementById("mioDiv");
+  
+  // Array di posizioni in cui spostare il div
+  var posizioni = [
+    { left: "200px", top: "100px" }, // Prima posizione
+    { left: "400px", top: "200px" }, // Seconda posizione
+    { left: "100px", top: "300px" }  // Terza posizione
+    // Aggiungi altre posizioni se necessario
+  ];
+
+  // Variabile per tenere traccia dell'indice della posizione corrente
+  var indicePosizione = 0;
+
+  // Aggiungi un gestore di eventi per l'evento di clic
+  mioDiv.addEventListener("click", function() {
+    // Ottieni la posizione corrente dal array
+    var posizioneCorrente = posizioni[indicePosizione];
+
+    // Sposta il div alla posizione corrente
+    mioDiv.style.left = posizioneCorrente.left;
+    mioDiv.style.top = posizioneCorrente.top;
+
+    // Incrementa l'indice della posizione corrente, ma assicurati che sia nell'intervallo corretto
+    indicePosizione = (indicePosizione + 1) % posizioni.length;
+  });
+</script>
+
+</body>
+</html>
