@@ -24,18 +24,20 @@
     </div>
 
     <div class="present">
-        <img id="regalo" src="present_clous.png" alt="Ooops! immagnia persa :" ondblclick="cambiaImmagine()">
+        <img id="regalo" src="present_clous.png" alt="Ooops! immagnia persa :">
     </div>
 
     <script>
-        function cambiaImmagine() {
-            var immagine = document.getElementById('regalo');
+        
+        var immagine = document.getElementById('regalo');
+        immagine,addEventListener("click", function(){
             if (immagine.src.match("present_clous.png")) {
                 immagine.src = "present_open.png"; // Cambia l'immagine
             } else {
                 immagine.src = "present_clous.png"; // Torna all'immagine originale se è stata cambiata
             }
-        }
+        });
+            
 
         
         var mioDiv = document.getElementById("burgher");
