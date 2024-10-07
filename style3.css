@@ -1,0 +1,163 @@
+body{
+    color: #ffbf00;
+    background:  linear-gradient( 40deg, #9f0000, #5b0000) no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+a{
+    color: #ffd500;
+    text-decoration: none;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+.account{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    padding: 0px 0px 0px 10px;
+    border-left: #ffd500 solid 2px;
+}
+.account a{
+    color: #f0f8ff;
+    border-radius: 50px;
+    background-color: #ffbf00;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+header{
+    height: 100vh;
+    display: flex;
+    align-items: center ;
+    justify-content:center;
+}
+
+.lista{
+    width:40%;
+    height: 100px;
+    overflow: scroll;
+    background-color: #5b0000;
+    border-radius: 20px;
+    padding: 10px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+::-webkit-scrollbar{
+    width: 10px;
+
+}
+::-webkit-scrollbar-button{
+    background-color: #5b000000;
+}
+::-webkit-scrollbar-corner{
+    background-color: #5b000000;
+}
+::-webkit-scrollbar-thumb{
+    background: #ffbf00;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-track{
+    background: #5b000000;
+    
+}
+.traccia{
+    width: 60%;
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+}
+.cerchio{
+    background: linear-gradient( 45deg, #000, #373737);
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cerchio div{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #ffbf00;
+}
+.canzone{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px 0px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.608) 0px 0px 10px;
+    color: #ffbf00;
+    margin-bottom: 10px;
+}
+.immagine_canzone{
+    background: linear-gradient( 45deg, #000, #373737);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.immagine_canzone div{
+    background-color: #ffbf00;
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+}
+
+audio{
+    border-radius: 20px;
+    width: 90%;
+}
+
+@media only screen and (max-width: 780px) {
+    .account{
+        display: none;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+    .lista{
+        height: 30%;
+        width: 70%;
+    }
+    .traccia{
+        height: 50%;
+        width: 70%;
+    }
+    .cerchio{
+        width:80%;
+        height: 50%;
+    }
+}
